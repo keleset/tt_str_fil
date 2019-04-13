@@ -49,3 +49,8 @@ fn test_mix_09() {
     let test_string = String::from("те虎с虎с虎с虎тстстринг");
     assert_eq!(super::string_filter(&test_string), "虎с虎с虎с虎");
 }
+#[test]
+fn test_mix_10() { 
+    let test_string = String::from("1234567577775");
+    assert_eq!(super::string_filter(&test_string), "7577775");
+}

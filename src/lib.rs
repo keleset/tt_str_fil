@@ -70,6 +70,11 @@ fn string_filter_base(strg: &String, base_len: usize) -> &str {
             }
         }
     }
+    //Check in case of streak is in the end of the string:
+    if curr_len > max_len {
+        max_len = curr_len;
+        max_start = curr_start;
+    }
     &strg[max_start..(max_start + max_len)] //Returning required string slice
 }
 
