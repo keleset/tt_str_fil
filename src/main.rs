@@ -5,7 +5,10 @@ fn main() {
     println!("Enter line:");
     match io::stdin().read_line(&mut in_str) {
         Ok(_) => {
-            println!("The longest streak is: {}", tt_str_fil::string_filter(&in_str));
+            println!(
+                "The longest streak is: {}",
+                tt_str_fil::string_filter(&in_str)
+            );
         }
         Err(e) => {
             println!("Holymolly, input error! {}", e);
